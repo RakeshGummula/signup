@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1> Hi {%'username'%} Welcome to Website </h1>
+        <form method="POST" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <input type="submit" value="Logout">
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1> Signup </h1>
+        <form method="POST" onsubmit="return validateForm()">
+            {% csrf_token %}
+            <label for="username">User Name : </label>
+            <input type="text" placeholder="Enter Username" name="username"><br><br>
+            <label for="Email1">Email ID : </label>
+            <input type="text" placeholder="Enter Email ID" name="Email1"><br><br>
+            <label for="Password1">Password : </label>
+            <input type="password" placeholder="Enter Password" name="Password1"><br><br>
+            <label for="Password2">Confirm Password : </label>
+            <input type="password" placeholder="Enter Confirm Password" name="Password2"><br><br>
+            <input type="submit" value="Signup">
+            <a href="{% url 'login' %}"> i have already account</a>
+        </form>
+        <script>
+            function validateForm() {
+                var username = document.forms[0]["username"].value;
+                var email = document.forms[0]["Email1"].value;
+                var password1 = document.forms[0]["Password1"].value;
+                var password2 = document.forms[0]["Password2"].value;
+
+                if (username === "" || email === "" || password1 === "" || password2 === "") {
+                    alert("All fields must be filled out");
+                    return false; 
+                }
+                return true;
+            }
+        </script>
+        <!-- {% for my_user in data %}
+        <div>
+          <p>ID-{{my_user.id}}</p>
+          <p>Username-{{my_user.username}}</p>
+          <p>Email-{{my_user.Email1}}</p>
+          <p>Password-{{my_user.Password1}}</p>
+          <p>Confirm Password-{{my_user.Password2}}</p>
+        </div>
+        {% endfor %} -->
+    </body>
+</html>
