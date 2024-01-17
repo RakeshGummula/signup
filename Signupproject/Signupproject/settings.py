@@ -141,6 +141,6 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'raks.marolix@gmail.com'
-EMAIL_HOST_PASSWORD = 'xziy okfa kdhh uara'
+EMAIL_HOST_PASSWORD = 'Password here'
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
