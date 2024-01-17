@@ -24,4 +24,6 @@ urlpatterns = [
     path('login/',views.LoginPage,name="login"),
     path('home/',views.homepage,name="home"),
     path('logout/',views.Logout,name="logout"),
+    path('forgotpassword/',views.ForgetPassword,name='forgotpassword'),
+    path('changepassword/<token>',views.change_password,name='changepassword'),
 ]

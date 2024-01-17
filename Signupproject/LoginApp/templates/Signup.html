@@ -2,6 +2,7 @@
 <html>
     <body>
         <h1> Signup </h1>
+        {% csrf_token %}
         <form method="POST" onsubmit="return validateForm()">
             {% csrf_token %}
             <label for="username">User Name : </label>
