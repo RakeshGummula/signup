@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+from django.core.mail import send_mail
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -143,4 +144,5 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'raks.marolix@gmail.com'
 EMAIL_HOST_PASSWORD = 'Password here'
 
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
